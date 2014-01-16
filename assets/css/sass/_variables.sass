@@ -1,0 +1,32 @@
+//  __  __     __     _ __   ____  
+// /\ \/\ \  /'__`\  /\`'__\/',__\ 
+// \ \ \_/ |/\ \L\.\_\ \ \//\__, `\
+//  \ \___/ \ \__/.\_\\ \_\\/\____/
+//   \/__/   \/__/\/_/ \/_/ \/___/ 
+//
+
+// Colors                           
+$grey: #e5e5e5
+$green: #57af75
+
+// Make the logo bigger 
+$logosize: 31 
+
+// This is the block height relative to the logo size. Don't change it.
+$staticheight: 7
+
+// This is the space between the blocks. Don't change it.
+$staticspace: 6
+
+// Speed of the animation
+$speed: 1s 
+
+// Find percentage for the block height and convert to nearest pixel
+@function find-block-height($x)
+	@return round(($staticheight * $x) / 100) + 'px'
+
+// Define the percentage found from the function
+$blockheight: #{find-block-height($logosize)}
+
+// Set border radius for blocks
+$blockborder: $blockheight
